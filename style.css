@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+.hero{
+    background: #1d2026;
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 20px 8%;
+    text-transform: capitalize;
+}
+nav .menu_img{
+    width: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+nav .logo_img{
+    width: 160px;
+    cursor: pointer;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+button{
+    background-color: #efefef;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+button span{
+    display: block;
+    background-color: #999;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    margin-left: 2px;
+    transition: background-color 0.5s, margin-left 0.5s;
+}
+.lamp_container{
+    position: absolute;
+    top: -20px;
+    left: 22%;
+    width: 200px;
+}
+.lamp{
+    width: 100%;
+}
+.light{
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translateX(-51.5%);
+    width: 700px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.text_container{
+    max-width: 600px;
+    margin: 9% 0px 0px 50%;
+    text-transform: capitalize;
+}
+.text_container h1{
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+.text_container a{
+    text-decoration: none;
+    background-color: #00996f;
+    padding: 14px 40px;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+.controle{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 250px;
+}
+.controle .line{
+    width: 250px;
+    height: 4px;
+    background-color: #fff;
+    margin: 0 20px;
+    border-radius: 2px;
+}
+.controle .line span{
+    width: 50%;
+    height: 8px;
+    margin-top: -2px;
+    border-radius: 4px;
+    background-color: #00996f;
+    display: block;
+}
+.active{
+    background-color: #00996f;
+}
+.active span{
+    background-color: #fff;
+    margin-left: 30px;
+}
+.on{
+    opacity: 1;
+}
+
+
+/*   media screen   */
+
+
+@media screen and (max-width: 1085px){
+    .hero{
+        position: relative;
+    }
+    .lamp_container{
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 1;
+    }
+    .lamp{
+        filter: invert(1);
+    }
+    .text_container{
+        position: absolute;
+        top: 40%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        z-index: 55;
+    }
+    .text_container h1{
+        font-size: 50px;
+    }
+    .controle{
+        margin-top: 100px;
+        justify-content: center;
+    }
+}
+@media (max-width: 830px){
+    nav{
+        flex-direction: column;
+        z-index: 5555;
+    }
+    nav ul{
+        z-index: 5555;
+    }
+    nav .logo_img{
+        width: 300px;
+    }
+    .button{
+        z-index: 555;
+        margin: 20px 0px 20px 0px;
+    }
+    .light{
+        width: 550px;
+    }
+}
+@media (max-width: 547px){
+    nav ul li{
+        margin: 0px 10px;
+    }
+    .light{
+        width: 500px;
+    }
+}
+
+
+@media (max-width: 415px){
+    .menu_img{
+        display: none;
+    }
+    nav ul{
+        display: flex;
+    }
+    nav ul li{
+        margin:0px 10px;
+        font-size: 10px;
+    }
+    nav .logo_img{
+        width: 200px;
+    }
+    .light{
+        width: 200px;
+    }
+    .text_container{
+        width: 100%;
+    }
+    .text_container {
+        top: 50%;
+    }
+    .controle .line{
+        width: 150px;
+    }
+
+}
+
+
+
+
+
+
+
+
